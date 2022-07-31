@@ -1,7 +1,5 @@
 import React from 'react'
 
-import './styles.less'
+import "./styles.sass"
 
-export default React.forwardRef((props, ref) => (
-    <div className={`spinner${props.isLoading ? ' loading' : ''}`} ref={ref}></div>
-))
+export default () => <div className="spinner"></div>
