@@ -43,19 +43,21 @@ const navLinks = [
 export default () => (
     <footer>
         <div className="container">
-            <Logo />
-            <div className="links-groups">
-               <List items={navLinks} itemHandler={(item, index) => <LinksGroup key={index} {...item} />} />
-            </div>
-            <div className="socials">
-               <List 
-                    items={socialLinks} 
-                    itemHandler={(item, index) => (
-                        <a key={index} href={`#${item}`}>
-                            <img src={`/images/icon-${item}.svg`} alt={item} />
-                        </a>
-                    )} 
-                />
+            <div className="wrapper">
+                <Logo />
+                <div className="links-groups">
+                <List items={navLinks} itemHandler={(item, index) => <LinksGroup key={index} {...item} />} />
+                </div>
+                <div className="socials">
+                <List 
+                        items={socialLinks} 
+                        itemHandler={(item, index) => (
+                            <a key={index} href={`#${item}`}>
+                                <img src={`/images/icon-${item}.svg`} alt={item} />
+                            </a>
+                        )} 
+                    />
+                </div>
             </div>
         </div>
     </footer>

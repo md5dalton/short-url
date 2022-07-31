@@ -9,9 +9,6 @@ footer
     svg path
         fill: white
 
-    .links-groups, .links-group
-        margin: 2em 0
-
     .links-group
         .name, a
             margin: 1em 0
@@ -19,12 +16,40 @@ footer
         a
             display: block
 
-    .socials 
-        margin-top: 3em
-
-        a
-            margin: 0 .8em
+    .socials a
+        margin: 0 .8em
     
     @include small-only
         text-align: -moz-center
         text-align: -webkit-center
+
+        .links-groups, .links-group
+            margin: 2em 0
+
+        .socials 
+            margin-top: 3em
+
+    @include medium
+        .wrapper
+            display: flex
+            justify-content: space-between
+
+        .logo
+            flex-grow: 1
+
+        .links-groups
+            padding-right: 4em
+
+            > .list
+                display: grid
+                grid-template-columns: repeat(3, auto)
+                justify-items: end
+                gap: 4em
+
+        .links-group
+            margin-bottom: 2em
+
+            .name
+                margin-top: 0
+
+                
