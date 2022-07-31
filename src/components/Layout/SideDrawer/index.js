@@ -1,6 +1,6 @@
 import React, { Fragment } from "react"
 import Backdrop from "../../UI/Backdrop"
-import Button, { TerciaryButton } from "../../UI/Button"
+import Button from "../../UI/Button"
 import NavLinks from "../../UI/NavLinks"
 
 import "./styles.sass"
@@ -13,7 +13,7 @@ export default ({ isOpen, toggleHandler }) => isOpen ? (
                 <div className="wrapper">
                     <NavLinks />
                     <div className="user-buttons">
-                        <TerciaryButton>login</TerciaryButton>
+                        <Button role="terciary">login</Button>
                         <Button>sign up</Button>
                     </div>
                 </div>

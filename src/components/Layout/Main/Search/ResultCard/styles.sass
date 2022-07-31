@@ -1,0 +1,41 @@
+@use '../../../../../styles/util' as *
+
+.card.result
+    background-color: var(--color-bg)
+    border-radius: var(--border-radius)
+    margin-top: 2em
+    text-align: initial
+
+    .link div
+        text-overflow: ellipsis
+        overflow: hidden
+        display: -webkit-box
+        -webkit-line-clamp: 1
+        -webkit-box-orient: vertical
+
+    .short
+        color: var(--color-primary)
+
+    button.copied
+        background-color: var(--color-secondary)
+
+    @include small-only
+        padding: 1em 0
+
+        > *
+            padding: .5em 1em
+            
+        .long
+            border-bottom: 1px solid var(--color-text-2)
+
+        .short
+            margin-top: .5em
+        
+    @include medium
+        display: flex
+        align-items: center
+        padding: 1em
+
+        .long
+            flex-grow: 1
+            padding-right: 1em

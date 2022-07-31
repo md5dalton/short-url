@@ -30,9 +30,8 @@ export default class Search extends Component
         ]
     }
 
-    searchHandler = e => {
-        const term = e.target.value
-        
+    getLink (term) {
+
         const api = "https://api.shrtco.de/v2/shorten?url="
         const url = api + term
 
@@ -77,10 +76,28 @@ export default class Search extends Component
         } else this.setState({
             error: "Please add a link"
         })
+    }
+
+    searchHandler = e => {
+        
+        this.setState({ 
+            term: e.target.value
+        })
+
+        this.getLink(e.target.value)
+
+    }
+
+    submitHandler = e => {
+
+        e.preventDefault()
+
+        this.getLink(this.state.term)
 
     }
     
     render () {
+        console.log("Search render")
         return (
             <div className="search">
                 <div className="wrapper">
@@ -89,7 +106,7 @@ export default class Search extends Component
                             <input type="text" placeholder="Shorten a link here..." onChange={this.searchHandler} />
                             {this.state.error ? <div className="error-msg">{this.state.error}</div> : null}
                         </div>
-                        <Button>shorten it!</Button>
+                        <Button onClick={this.submitHandler}>shorten it!</Button>
                     </form>
                 </div>
                 <div className="results">

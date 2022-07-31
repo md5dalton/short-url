@@ -30,40 +30,9 @@
         margin-top: .5em
         color: var(--color-error)
 
-    .card.result
-        background-color: var(--color-bg)
-        border-radius: var(--border-radius)
-        margin-top: 2em
-        text-align: initial
-
-        .link div
-            text-overflow: ellipsis
-            overflow-y: hidden
-            display: -webkit-box
-            -webkit-line-clamp: 1
-            -webkit-box-orient: vertical
-
-        .short
-            color: var(--color-primary)
-
-        button.copied
-            background-color: var(--color-secondary)
-
     @include small-only
         form button
             margin-top: 1em
-
-        .card.result
-            padding: 1em 0
-
-            > *
-                padding: .5em 1em
-                
-            .long
-                border-bottom: 1px solid var(--color-text-2)
-
-            .short
-                margin-top: .5em
         
     @include medium
         .wrapper
@@ -76,15 +45,6 @@
             .input-wrapper
                 flex-grow: 1
         
-        .card.result
-            display: flex
-            align-items: center
-            padding: 1em
-
-            .long
-                flex-grow: 1
-                padding-right: 1em
-
         button
             width: fit-content
             flex-shrink: 0

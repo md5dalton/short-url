@@ -1,5 +1,5 @@
 import React from 'react'
-import Button, { SecondaryButton, TerciaryButton } from '../../UI/Button'
+import Button from '../../UI/Button'
 import Logo from '../../UI/Logo'
 import NavLinks from '../../UI/NavLinks'
 import SideDrawerToggler from '../../UI/SideDrawerToggler'
@@ -12,7 +12,7 @@ export default props => (
             <Logo />
             <NavLinks />
             <div className="user-buttons">
-                <TerciaryButton>login</TerciaryButton>
+                <Button role="terciary">login</Button>
                 <Button>sign up</Button>
             </div>
             <SideDrawerToggler 
