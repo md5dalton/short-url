@@ -2,11 +2,11 @@ import React, { Fragment, Component } from 'react'
 import BenefitCard from '../UI/BenefitCard'
 import Button from '../UI/Button'
 import List from '../UI/List'
-// import SideDrawer from '../UI/SideDrawer'
 import Header from "./Header"
 import Footer from "./Footer"
 
 import "./styles.sass"
+import SideDrawer from './SideDrawer'
 
 const benefits = [
     {
@@ -57,10 +57,10 @@ export default class Layout extends Component
                     searchToggleHandler={this.toggleSearch}
                     sideDrawerToggleHandler={this.toggleSideDrawer}
                 />
-                {/* <SideDrawer
+                <SideDrawer
                     isOpen={this.state.sideDrawerIsOpen}
                     toggleHandler={this.toggleSideDrawer}
-                /> */}
+                />
                 <main>
                     <section id="hero">
                         <div className="container">

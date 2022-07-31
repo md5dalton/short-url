@@ -50,13 +50,13 @@ export default () => (
                 </div>
                 <div className="socials">
                 <List 
-                        items={socialLinks} 
-                        itemHandler={(item, index) => (
-                            <a key={index} href={`#${item}`}>
-                                <img src={`/images/icon-${item}.svg`} alt={item} />
-                            </a>
-                        )} 
-                    />
+                    items={socialLinks} 
+                    itemHandler={(item, index) => (
+                        <a key={index} href={`#${item}`}>
+                            <img src={`/images/icon-${item}.svg`} alt={item} />
+                        </a>
+                    )} 
+                />
                 </div>
             </div>
         </div>
