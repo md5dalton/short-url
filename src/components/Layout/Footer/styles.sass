@@ -1,0 +1,30 @@
+@use '../../../styles/util' as *
+
+footer
+    background-color: var(--color-bg-3)
+    color: white
+    padding: 3em 0
+    text-transform: capitalize
+
+    svg path
+        fill: white
+
+    .links-groups, .links-group
+        margin: 2em 0
+
+    .links-group
+        .name, a
+            margin: 1em 0
+
+        a
+            display: block
+
+    .socials 
+        margin-top: 3em
+
+        a
+            margin: 0 .8em
+    
+    @include small-only
+        text-align: -moz-center
+        text-align: -webkit-center

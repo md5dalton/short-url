@@ -1,0 +1,23 @@
+button
+    appearance: none
+    background: none
+    border: none
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    text-transform: capitalize
+    transition: var(--transition)
+    border-radius: 3em
+    padding: 0 1em
+    font-weight: 700
+
+    &.primary
+        color: white
+        background-color: var(--color-primary)
+
+    &.secondary
+        color: var(--color-primary)
+
+    &.secondary
+        border: solid var(--color-primary)
