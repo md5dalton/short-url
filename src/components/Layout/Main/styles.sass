@@ -1,4 +1,4 @@
-@use '../../styles/util' as *
+@use '../../../styles/util' as *
 
 main
     @include small-only
@@ -19,7 +19,7 @@ section
         padding-bottom: 5em
 
     &#boost
-        background-image: url("../../../dist/images/bg-boost-mobile.svg")
+        background-image: url("../../../../dist/images/bg-boost-mobile.svg")
         color: white
         text-align: -webkit-center
         text-align: -moz-center
@@ -28,28 +28,10 @@ section
         button
             margin-top: 2em
 
-    &#boost, .search
+    &#boost, .search .wrapper
         background-repeat: no-repeat
         background-color: var(--color-secondary)
         background-size: cover
-
-    .search
-        background-image: url("../../../dist/images/bg-shorten-mobile.svg")
-        padding: 1em
-        border-radius: 10px
-        position: relative
-        top: -4em
-
-        form > *
-            width: 100%
-            border-radius: 10px
-            height: 2.5em
-
-        input
-            appearance: none
-            outline: none
-            padding: 0 1em
-            border-color: transparent
 
     .benefits
         .list
@@ -91,9 +73,6 @@ section
             img
                 width: 150%
         
-        .search form button
-            margin-top: 1em
-        
     @include medium
         &#hero
             padding-top: 5em
@@ -117,20 +96,7 @@ section
             padding-bottom: 10em
 
         &#boost
-            background-image: url("../../../dist/images/bg-boost-desktop.svg")
-
-        .search
-            background-image: url("../../../dist/images/bg-shorten-desktop.svg")
-            
-            form
-                display: flex
-                align-items: center
-                padding: 2em
-
-            button
-                width: fit-content
-                flex-shrink: 0
-                margin-left: 1em
+            background-image: url("../../../../dist/images/bg-boost-desktop.svg")
 
         .stats
             text-align: center

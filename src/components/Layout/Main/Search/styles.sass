@@ -1,0 +1,91 @@
+@use '../../../../styles/util' as *
+
+.search
+    position: relative
+    top: -4em
+
+    .wrapper
+        background-image: url("../../../../../dist/images/bg-shorten-mobile.svg")
+        padding: 1em
+        border-radius: var(--border-radius)
+
+    button, input
+        width: 100%
+        border-radius: var(--border-radius)
+        height: 2.5em
+
+    input
+        appearance: none
+        outline: none
+        padding: 0 1em
+        border-color: transparent
+
+    form.error input
+        color: var(--color-error)
+        outline: solid var(--color-error)
+
+    .error-msg
+        text-align: initial
+        font-style: italic
+        margin-top: .5em
+        color: var(--color-error)
+
+    .card.result
+        background-color: var(--color-bg)
+        border-radius: var(--border-radius)
+        margin-top: 2em
+        text-align: initial
+
+        .link div
+            text-overflow: ellipsis
+            overflow-y: hidden
+            display: -webkit-box
+            -webkit-line-clamp: 1
+            -webkit-box-orient: vertical
+
+        .short
+            color: var(--color-primary)
+
+        button.copied
+            background-color: var(--color-secondary)
+
+    @include small-only
+        form button
+            margin-top: 1em
+
+        .card.result
+            padding: 1em 0
+
+            > *
+                padding: .5em 1em
+                
+            .long
+                border-bottom: 1px solid var(--color-text-2)
+
+            .short
+                margin-top: .5em
+        
+    @include medium
+        .wrapper
+            background-image: url("../../../../../dist/images/bg-shorten-desktop.svg")
+            
+        form
+            display: flex
+            padding: 2em
+
+            .input-wrapper
+                flex-grow: 1
+        
+        .card.result
+            display: flex
+            align-items: center
+            padding: 1em
+
+            .long
+                flex-grow: 1
+                padding-right: 1em
+
+        button
+            width: fit-content
+            flex-shrink: 0
+            margin-left: 1em
