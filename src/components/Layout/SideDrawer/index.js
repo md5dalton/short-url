@@ -1,16 +1,23 @@
 import React, { Fragment } from "react"
 import Backdrop from "../../UI/Backdrop"
+import Button, { TerciaryButton } from "../../UI/Button"
 import NavLinks from "../../UI/NavLinks"
-import ThemeToggler from "../ThemeToggler"
 
 import "./styles.sass"
 
-export default props => props.isOpen ? (
+export default ({ isOpen, toggleHandler }) => isOpen ? (
     <Fragment>
-        <Backdrop isOpen={props.isOpen} onClick={props.toggleHandler} />
+        <Backdrop isOpen={isOpen} onClick={toggleHandler} />
         <div className="side-drawer">
-            <ThemeToggler />
-            <NavLinks />
+            <div className="container">
+                <div className="wrapper">
+                    <NavLinks />
+                    <div className="user-buttons">
+                        <TerciaryButton>login</TerciaryButton>
+                        <Button>sign up</Button>
+                    </div>
+                </div>
+            </div>
         </div>
     </Fragment>
 ) : null
