@@ -12,8 +12,24 @@ export default ({ long, short }) => {
             .writeText(short)
             .then(() => setCopied(true))
     }
+    
+    return (
+        <div className="item result card">
+            <div className="link long">
+                <div>{long}</div>
+            </div>
+            <div className="link short">
+                <div>{short}</div>
+            </div>
+            <div>
+                <Button onClick={copyToClipboard} className={copied ? "copied" : ""}>{copied ? "copied!" : "copy"}</Button>
+            </div>
+        </div>
+    )
+}
 
-        
+
+
     // const copyToClipboard = () => {
 
     //     const TA = document.createElement("textarea")
@@ -49,17 +65,3 @@ export default ({ long, short }) => {
 
     // }
     
-    return (
-        <div className="item result card">
-            <div className="link long">
-                <div>{long}</div>
-            </div>
-            <div className="link short">
-                <div>{short}</div>
-            </div>
-            <div>
-                <Button onClick={copyToClipboard} className={copied ? "copied" : ""}>{copied ? "copied!" : "copy"}</Button>
-            </div>
-        </div>
-    )
-}
