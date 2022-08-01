@@ -12,6 +12,42 @@ export default ({ long, short }) => {
             .writeText(short)
             .then(() => setCopied(true))
     }
+
+        
+    // const copyToClipboard = () => {
+
+    //     const TA = document.createElement("textarea")
+
+    //     // textarea({style: 'top:0;left:0;position:fixed'});
+
+    //     document.body.append(TA);
+
+    //     TA.focus();
+
+    //     TA.value = short;
+
+    //     TA.select();
+
+    //     try {
+            
+    //         const copy = document.execCommand('copy');
+            
+    //         setCopied(true)
+
+    //         // let msg = copy ? 'Successful' : 'Failed';
+
+    //         // alert(msg);
+
+    //     } catch (error) {
+            
+    //         // alert(error);
+    //         console.log(error);
+
+    //     }
+
+    //     TA.remove();
+
+    // }
     
     return (
         <div className="item result card">
