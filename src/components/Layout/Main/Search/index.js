@@ -14,7 +14,7 @@ export default class Search extends Component
         isLoading: false,
         term: "",
         results:[],
-        resultsB: [
+        resultsDev: [
             {
                 long: "https://www.frontendmentor.io",
                 short: "https://rel.ink/xae3f2"
@@ -97,7 +97,6 @@ export default class Search extends Component
     }
     
     render () {
-        console.log("Search render")
         return (
             <div className="search">
                 <div className="wrapper">
