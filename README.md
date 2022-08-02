@@ -35,7 +35,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 - Repository URL: [Github](https://github.com/md5dalton/short-url)
 <!-- - Solution URL: [Frontend Mentor](https://www.frontendmentor.io/challenges) -->
-<!-- - Live Site URL: [Vercel](https://vercel.app/) -->
+- Live Site URL: [Vercel](https://shorty-pied.vercel.app)
 
 ## My process
 
