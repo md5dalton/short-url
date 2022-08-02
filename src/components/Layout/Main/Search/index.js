@@ -3,7 +3,7 @@ import React, { Component } from "react"
 import Button from "../../../UI/Button"
 import List from "../../../UI/List"
 import Spinner from "../../../UI/Spinner"
-import ResultCard from "./ResultCard"
+import ResultCard from "../../../UI/ResultCard"
 
 import "./styles.sass"
 
