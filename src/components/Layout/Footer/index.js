@@ -49,14 +49,14 @@ export default () => (
                 <List items={navLinks} itemHandler={(item, index) => <LinksGroup key={index} {...item} />} />
                 </div>
                 <div className="socials">
-                <List 
-                    items={socialLinks} 
-                    itemHandler={(item, index) => (
-                        <a key={index} href={`#${item}`}>
-                            <img src={`/images/icon-${item}.svg`} alt={item} />
-                        </a>
-                    )} 
-                />
+                    <List 
+                        items={socialLinks} 
+                        itemHandler={(item, index) => (
+                            <a key={index} href={`#${item}`}>
+                                <img src={`/images/icon-${item}.svg`} alt={item} />
+                            </a>
+                        )} 
+                    />
                 </div>
             </div>
         </div>
